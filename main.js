@@ -66,6 +66,16 @@ function replacement(){
 	document.getElementById("output-text").value = txt;
 }
 
+function readlol(){
+var fs = require('fs')
+fs.readFile('demo.txt', function(err,data){
+  if (err)
+  return err;
+  document.getElementById("output-text").value = data.toString() ; 
+});
+
+}
+
 function copytext(){
 	var txt = document.getElementById("output-text");
 	txt.select();
